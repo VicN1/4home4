@@ -1,0 +1,428 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Public+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root {
+    --dm: "DM Serif Display", serif;
+    --pub: "Public Sans", sans-serif;
+}
+
+body {
+    background-color: #EDF3F8;
+}
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    text-decoration: none;
+    font-family: var(--pub);
+    color: #36536B;
+    font-weight: 600;
+    font-size: 14px;
+    align-items: center;
+    transition: all .2s ease;
+    outline: none;
+}
+
+.container {
+    max-width: 1110px;
+    margin: 0 auto;
+}
+
+header,
+main,
+footer {
+    padding: 30px;
+}
+
+main {
+    padding: 100px 0;
+}
+
+main .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 100px;
+}
+
+header li a:hover {
+    color:#11344f;
+}
+
+footer {
+    background-color: #1B262F;
+}
+
+footer nav ul {
+    gap: 22px;
+}
+
+footer nav ul li a {
+    color: #FBFCFE;
+}
+
+footer nav ul li a:hover {
+    color: #ddf0ff;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+}
+
+ul {
+    display: flex;
+    gap: 30px;
+}
+
+.logo {
+    width: 135px;
+    height: 38px;
+}
+
+.sec1 {
+    width: 100%;
+}
+
+.section1 {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.phone {
+    width: 235px;
+    position: relative;
+}
+
+.section1 .tit {
+    line-height: 80px;
+    width: 550px;
+    font-weight: 500;
+    font-size: 72px;
+    font-family: var(--dm);
+}
+
+.iphone {
+    width: 235px;
+}
+
+.nottit {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.nottit span:nth-child(1) {
+    color: #BA4270;
+    font-size: 13px;
+}
+
+.nottit span:nth-child(2) {
+    color: #36536b93;
+    font-size: 13px;
+}
+
+.not p {
+    font-size: 10px;
+    font-weight: 500;
+    color: #36536be1;
+    line-height: 13px;
+}
+
+.not p span {
+    color: #274b69;
+    font-size: 11px;
+}
+
+.section2 {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+
+.info {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 25px;
+    width: 500px;
+}
+
+.info p {
+    font-weight: 400;
+    color: #6C8294;
+    line-height: 27px;
+}
+
+.info .tit {
+    font-size: 20px;
+    font-weight: 500;
+    font-size: 50px;
+    font-family: var(--dm);
+    color: #36536B;
+}
+
+.section3 {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+
+}
+
+.bank {
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+}
+
+.cycle:hover {
+    background-color: #2b4255;
+    cursor: pointer;
+}
+
+.bank p {
+    font-size: 20px;
+}
+
+.cycle {
+    background-color: #36536B;
+    border-radius: 50%;
+    width: 120px;
+    height: 120px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.s {
+    width: 60px;
+    height: 65px;
+}
+
+.s3 {
+    width: 60px;
+    height: 50px;
+}
+
+.soc {
+    width: 25px;
+}
+
+.script {
+    width: 400px;
+    height: 260px;
+}
+
+.btn {
+    color: white;
+    border-radius: 50px;
+    background-color: #BA4270;
+    padding: 13px 18px;
+}
+
+.btn:hover {
+    background-color: #af3866;
+}
+
+.drop .up {
+    color: #223a4e;
+    display: none;
+}
+
+.not {
+    background-color: #e9eef7;
+    border-radius: 10px;
+    width: 180px;
+    position: absolute;
+    left: 50%;
+    top: 160px;
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+    width: 170px;
+    padding: 15px;
+    transition: all 0s ease;
+    animation-duration: 3.5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    opacity: 0;
+    animation: notif 10.5s linear infinite;
+}
+
+.phone .not:nth-of-type(1) {
+  animation-delay: 0s;
+}
+
+.phone .not:nth-of-type(2) {
+  animation-delay: 3.5s;
+}
+
+.phone .not:nth-of-type(3) {
+  animation-delay: 7s;
+}
+
+@keyframes notif {
+  0% {
+    opacity: 0;
+    top: 160px;
+  }
+  10% {
+    opacity: 1;
+  }
+  30% {
+    opacity: 1;
+  }
+  40% {
+    opacity: 0;
+    top: 300px;
+  }
+  100% {
+    opacity: 0;
+    top: 300px;
+  }
+}
+
+@media (max-width:769px) {
+    * {
+        text-align: center;
+    }
+
+    .container {
+        max-width: 740px;
+    }
+
+    .section1,
+    .section2 {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 50px;
+    }
+
+    main .container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 50px;
+    }
+
+    .info {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 40px;
+    }
+
+    .info p {
+        line-height: 20px;
+    }
+
+    .section3 {
+        gap: 50px;
+    }
+}
+
+@media (max-width:415px) {
+    * {
+        text-align: center;
+    }
+
+    .container {
+        max-width: 400px;
+    }
+
+    main .container {
+        gap: 0;
+    }
+
+    .section1 {
+        gap: 0;
+    }
+
+    .section1 .tit {
+        font-size: 30px;
+        width: 350px;
+        line-height: 45px;
+    }
+
+    .phone {
+        transform: scale(.8);
+    }
+
+    .section3 {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .down {
+        display: none;
+        flex-direction: column;
+        align-items: start;
+        gap: 0;
+        position: absolute;
+        background-color: white;
+        border-radius: 10px;
+        box-shadow: 1px 1px 10px 1px rgba(0, 0, 0, 0.2);
+        font-size: 10px;
+        right: 30px;
+        top: 60px;
+    }
+    
+    .section2 {
+        transform: scale(.8);
+        gap: 30px;
+    }
+
+    .section2 .info {
+        width: 400px;
+        gap: 20px;
+    }
+
+    .section2 .info p {
+        line-height: 19px;
+    }
+
+    .section2 .info .tit {
+        font-size: 40px;
+    }
+
+    .section3 {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 0;
+    }
+    
+    .section3 .bank {
+        transform: scale(.8);
+    }
+
+    .down li,
+    .down .btn {
+        padding: 10px;
+        background-color: transparent;
+        color: #36536B;
+    }
+    
+    .drop .down {
+        display: none;
+    }
+
+    .drop .up {
+        display: block;
+    }
+
+    .drop:hover .up,
+    .drop:active .up {
+        cursor: pointer;
+    }
+
+    .drop:hover .down,
+    .drop:active .down {
+        display: flex;
+        cursor: pointer;
+    }
+}
